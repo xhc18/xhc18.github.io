@@ -419,19 +419,19 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>AI 聊天助手 - 普通模式</title>
+  <title>AI 聊天助手 - 已切换至 chatanywhere.tech</title>
 
   <!-- 引入 marked.js -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
   <!-- 引入 highlight.js（代码高亮） -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/github.min.css"> 
-  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/github.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
 
   <!-- 引入 KaTeX（数学公式渲染） -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"> 
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script> 
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"  onload="renderMath()"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" onload="renderMath()"></script>
 
   <style>
     body {
@@ -726,17 +726,26 @@ async function sendMessage() {
   saveHistoryToLocalStorage();
 
   try {
-    const response = await fetch('https://free.v36.cm/v2',  {
+    // ✅ 使用 chatanywhere.tech 国内优选地址
+    const response = await fetch('https://api.chatanywhere.tech/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer sk-Lb975ni0OqDsiOMX10BaE1194bC34e01A0B39dB92cE3E190'
+        'Authorization': 'Bearer sk-aKzUjdcfzEPY4Lg3iQYuQDuwK28HNzL1PDhNpGWaIpJfXc5S'
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
         messages: chatHistory
       })
     });
+
+    // 检查响应类型
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      const text = await response.text();
+      console.error("收到非 JSON 响应:", text);
+      throw new Error("API 返回了 HTML 页面，可能是服务异常或需登录");
+    }
 
     const data = await response.json();
     const reply = data.choices?.[0]?.message?.content || '出错了';
@@ -753,7 +762,7 @@ async function sendMessage() {
 
     const errorDiv = document.createElement('div');
     errorDiv.className = 'message bot';
-    errorDiv.innerHTML = marked.parse('请求失败: ' + e.message);
+    errorDiv.innerHTML = marked.parse(`请求失败: ${e.message}`);
     document.getElementById("chatbot-messages").appendChild(errorDiv);
     autoScrollToBottom();
 
@@ -775,7 +784,6 @@ function addMessage(text, role) {
   div.innerHTML = marked.parse(text);
   div.setAttribute('contenteditable', role === 'user' ? 'true' : 'false');
 
-  // 创建按钮容器
   const buttonsDiv = document.createElement('div');
   buttonsDiv.className = 'message-buttons';
 
@@ -824,7 +832,6 @@ function updateMessage(element, newContent) {
     saveHistoryToLocalStorage();
   }
 
-  // 重新插入编辑按钮
   const oldButtons = element.querySelector('.message-buttons');
   if (oldButtons) oldButtons.remove();
 
@@ -866,7 +873,7 @@ async function fetchAIReply(userMessage, index) {
   messagesContainer.appendChild(typingDiv);
 
   try {
-    const response = await fetch('https://api.chatanywhere.tech/v1/chat/completions',  {
+    const response = await fetch('https://api.chatanywhere.tech/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -877,6 +884,13 @@ async function fetchAIReply(userMessage, index) {
         messages: [{ role: "user", content: userMessage }]
       })
     });
+
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      const text = await response.text();
+      console.error("重新生成时收到非 JSON 响应:", text);
+      throw new Error("上游服务异常");
+    }
 
     const data = await response.json();
     const reply = data.choices?.[0]?.message?.content || '出错了';

@@ -420,8 +420,8 @@
 </ul>
 <h3 id="步骤2：设置邮箱地址"><a href="#步骤2：设置邮箱地址" class="headerlink" title="步骤2：设置邮箱地址"></a>步骤2：设置邮箱地址</h3><ol>
 <li>输入自定义前缀（格式示例）：  <ul>
-<li>推荐：<code>姓名全拼</code>（如<a href="mailto:&#x7a;&#104;&#x61;&#110;&#x67;&#x77;&#x65;&#105;&#x40;&#111;&#117;&#116;&#108;&#111;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#x6d;">zhangwei@outlook.com</a>）  </li>
-<li>备选：<code>姓名缩写+行业</code>（如<a href="mailto:&#122;&#46;&#x77;&#x2e;&#x64;&#101;&#x73;&#x69;&#x67;&#110;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#111;&#107;&#46;&#x63;&#x6f;&#109;">z.w.design@outlook.com</a>）</li>
+<li>推荐：<code>姓名全拼</code>（如<a href="mailto:&#x7a;&#104;&#x61;&#x6e;&#x67;&#x77;&#101;&#105;&#64;&#x6f;&#117;&#x74;&#108;&#111;&#x6f;&#107;&#x2e;&#99;&#111;&#109;">zhangwei@outlook.com</a>）  </li>
+<li>备选：<code>姓名缩写+行业</code>（如<a href="mailto:&#x7a;&#46;&#x77;&#x2e;&#100;&#101;&#x73;&#105;&#103;&#110;&#64;&#111;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;">z.w.design@outlook.com</a>）</li>
 </ul>
 </li>
 <li>选择邮箱后缀：<code>@outlook.com</code>或<code>@hotmail.com</code></li>
@@ -486,135 +486,6 @@
 - 网页9：人机验证实操演示  
 - 网页5：验证环节优化技巧
 </code></pre>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/05/16/3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="谢某人">
-      <meta itemprop="description" content=" ">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="某人的blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2025/05/16/3/" class="post-title-link" itemprop="url">在 macOS 上使用 Hexo 搭建个人博客的完整指南</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2025-05-16 00:00:00 / 修改时间：22:06:53" itemprop="dateCreated datePublished" datetime="2025-05-16T00:00:00+08:00">2025-05-16</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="在-macOS-上使用-Hexo-搭建个人博客的完整指南"><a href="#在-macOS-上使用-Hexo-搭建个人博客的完整指南" class="headerlink" title="在 macOS 上使用 Hexo 搭建个人博客的完整指南"></a>在 macOS 上使用 Hexo 搭建个人博客的完整指南</h1><p><img src="https://example.com/hexo-banner.jpg" alt="Hexo+Github Pages"><br><em>基于 Node.js 的静态博客框架 + 免费托管的完美组合</em> </p>
-<hr>
-<h2 id="一、环境准备与工具安装"><a href="#一、环境准备与工具安装" class="headerlink" title="一、环境准备与工具安装"></a>一、环境准备与工具安装</h2><h3 id="1-1-安装-Homebrew（推荐国内镜像源）"><a href="#1-1-安装-Homebrew（推荐国内镜像源）" class="headerlink" title="1.1 安装 Homebrew（推荐国内镜像源）"></a>1.1 安装 Homebrew（推荐国内镜像源）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用中科大镜像加速安装（适合中国大陆用户）</span></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_BREW_GIT_REMOTE=<span class="string">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span></span><br><span class="line">/bin/bash -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
-<p><em>国际用户可直接使用官方脚本</em> </p>
-<h3 id="1-2-安装核心组件"><a href="#1-2-安装核心组件" class="headerlink" title="1.2 安装核心组件"></a>1.2 安装核心组件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install git          <span class="comment"># macOS 虽自带 Git，建议更新版本</span></span><br><span class="line">brew install node        <span class="comment"># 包含 npm 包管理器</span></span><br><span class="line">node -v &amp;&amp; npm -v        <span class="comment"># 验证安装（推荐 Node.js ≥v18）</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="二、Hexo-博客系统搭建"><a href="#二、Hexo-博客系统搭建" class="headerlink" title="二、Hexo 博客系统搭建"></a>二、Hexo 博客系统搭建</h2><h3 id="2-1-初始化项目"><a href="#2-1-初始化项目" class="headerlink" title="2.1 初始化项目"></a>2.1 初始化项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli  <span class="comment"># 全局安装脚手架</span></span><br><span class="line">hexo init myblog         <span class="comment"># 创建博客目录</span></span><br><span class="line"><span class="built_in">cd</span> myblog &amp;&amp; npm install <span class="comment"># 安装依赖包</span></span><br></pre></td></tr></table></figure>
-<p><em>目录结构说明</em>：  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">myblog</span><br><span class="line">├── _config.yml     # 全局配置文件</span><br><span class="line">├── source          # 文章与资源存放处</span><br><span class="line">├── themes          # 主题存放目录</span><br><span class="line">└── package.json    # 依赖管理文件</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-本地预览"><a href="#2-2-本地预览" class="headerlink" title="2.2 本地预览"></a>2.2 本地预览</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g   <span class="comment"># 生成静态文件</span></span><br><span class="line">hexo server            <span class="comment"># 启动本地服务</span></span><br></pre></td></tr></table></figure>
-<p><em>访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 查看初始页面</em> </p>
-<hr>
-<h2 id="三、部署到-GitHub-Pages"><a href="#三、部署到-GitHub-Pages" class="headerlink" title="三、部署到 GitHub Pages"></a>三、部署到 GitHub Pages</h2><h3 id="3-1-配置-SSH-密钥"><a href="#3-1-配置-SSH-密钥" class="headerlink" title="3.1 配置 SSH 密钥"></a>3.1 配置 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;your@email.com&quot;</span>  <span class="comment"># 三次回车生成密钥</span></span><br><span class="line">pbcopy &lt; ~/.ssh/id_rsa.pub            <span class="comment"># 复制公钥到剪贴板</span></span><br></pre></td></tr></table></figure>
-<p><em>登录 GitHub → Settings → SSH Keys 添加新密钥</em> </p>
-<h3 id="3-2-创建代码仓库"><a href="#3-2-创建代码仓库" class="headerlink" title="3.2 创建代码仓库"></a>3.2 创建代码仓库</h3><ol>
-<li>新建名为 <code>&lt;username&gt;.github.io</code> 的公开仓库  </li>
-<li>修改 <code>_config.yml</code> 部署配置：</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-3-部署到云端"><a href="#3-3-部署到云端" class="headerlink" title="3.3 部署到云端"></a>3.3 部署到云端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save  <span class="comment"># 安装部署插件</span></span><br><span class="line">hexo clean &amp;&amp; hexo g -d               <span class="comment"># 生成并部署</span></span><br></pre></td></tr></table></figure>
-<p><em>首次部署需创建 Personal Access Token 替代密码</em> </p>
-<hr>
-<h2 id="四、主题定制与优化"><a href="#四、主题定制与优化" class="headerlink" title="四、主题定制与优化"></a>四、主题定制与优化</h2><h3 id="4-1-安装热门主题（以-Fluid-为例）"><a href="#4-1-安装热门主题（以-Fluid-为例）" class="headerlink" title="4.1 安装热门主题（以 Fluid 为例）"></a>4.1 安装热门主题（以 Fluid 为例）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/fluid-dev/hexo-theme-fluid themes/fluid</span><br></pre></td></tr></table></figure>
-<p>修改全局配置：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">fluid</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-2-推荐配置项"><a href="#4-2-推荐配置项" class="headerlink" title="4.2 推荐配置项"></a>4.2 推荐配置项</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 主题配置文件 _config.fluid.yml</span></span><br><span class="line"><span class="attr">navbar:</span></span><br><span class="line">  <span class="attr">menu:</span></span><br><span class="line">    <span class="bullet">-</span> &#123; <span class="attr">key:</span> <span class="string">&#x27;home&#x27;</span>, <span class="attr">link:</span> <span class="string">&#x27;/&#x27;</span>, <span class="attr">icon:</span> <span class="string">&#x27;iconfont icon-home&#x27;</span> &#125;</span><br><span class="line">    <span class="bullet">-</span> &#123; <span class="attr">key:</span> <span class="string">&#x27;archives&#x27;</span>, <span class="attr">link:</span> <span class="string">&#x27;/archives/&#x27;</span>, <span class="attr">icon:</span> <span class="string">&#x27;iconfont icon-archive&#x27;</span> &#125;</span><br><span class="line"><span class="attr">lazyload:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>         <span class="comment"># 启用图片懒加载</span></span><br><span class="line">  <span class="attr">loading_img:</span> <span class="string">/img/loading.gif</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="五、写作与发布流程"><a href="#五、写作与发布流程" class="headerlink" title="五、写作与发布流程"></a>五、写作与发布流程</h2><h3 id="5-1-创建新文章"><a href="#5-1-创建新文章" class="headerlink" title="5.1 创建新文章"></a>5.1 创建新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;我的第一篇博客&quot;</span>  <span class="comment"># 生成 /source/_posts/我的第一篇博客.md</span></span><br></pre></td></tr></table></figure>
-<p><em>Markdown 文件需包含 Front Matter</em>：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 我的第一篇博客</span><br><span class="line">date: 2023-08-20</span><br><span class="line">tags: </span><br><span class="line"><span class="bullet">  -</span> 技术分享</span><br><span class="line"><span class="section">  - Hexo</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-2-插入本地图片"><a href="#5-2-插入本地图片" class="headerlink" title="5.2 插入本地图片"></a>5.2 插入本地图片</h3><ol>
-<li>在 <code>/source/images</code> 创建图片目录  </li>
-<li>使用相对路径引用：</li>
-</ol>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">/images/sample.jpg</span>)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="六、高级技巧与问题排查"><a href="#六、高级技巧与问题排查" class="headerlink" title="六、高级技巧与问题排查"></a>六、高级技巧与问题排查</h2><h3 id="6-1-国内优化方案"><a href="#6-1-国内优化方案" class="headerlink" title="6.1 国内优化方案"></a>6.1 国内优化方案</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置淘宝镜像源</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-2-常见问题处理"><a href="#6-2-常见问题处理" class="headerlink" title="6.2 常见问题处理"></a>6.2 常见问题处理</h3><table>
-<thead>
-<tr>
-<th>问题现象</th>
-<th>解决方案</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>SSH 连接失败</td>
-<td>执行 <code>ssh -T git@github.com</code> 测试</td>
-</tr>
-<tr>
-<td>部署后页面无更新</td>
-<td>清除浏览器缓存或等待 CDN 刷新</td>
-</tr>
-<tr>
-<td>图片加载异常</td>
-<td>检查路径大小写是否正确</td>
-</tr>
-</tbody></table>
-<hr>
-<p><strong>扩展阅读</strong>：  </p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo 官方文档</a>   </li>
-<li><a target="_blank" rel="noopener" href="https://fluid-dev.github.io/hexo-fluid-docs/guide/">Fluid 主题深度配置指南</a><br>如需更详细的教程，请参阅<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">https://zhuanlan.zhihu.com/p/102592286</a></li>
-</ul>
 
       
     </div>
@@ -780,6 +651,135 @@
 </blockquote>
 <hr>
 <p><strong>参考资料</strong><br> DigitalPlat官方文档及社区实践<br> 安全检测报告<br> SSL&#x2F;TLS配置建议  </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/05/16/3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="谢某人">
+      <meta itemprop="description" content=" ">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="某人的blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/05/16/3/" class="post-title-link" itemprop="url">在 macOS 上使用 Hexo 搭建个人博客的完整指南</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-05-16 00:00:00 / 修改时间：22:06:53" itemprop="dateCreated datePublished" datetime="2025-05-16T00:00:00+08:00">2025-05-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="在-macOS-上使用-Hexo-搭建个人博客的完整指南"><a href="#在-macOS-上使用-Hexo-搭建个人博客的完整指南" class="headerlink" title="在 macOS 上使用 Hexo 搭建个人博客的完整指南"></a>在 macOS 上使用 Hexo 搭建个人博客的完整指南</h1><p><img src="https://example.com/hexo-banner.jpg" alt="Hexo+Github Pages"><br><em>基于 Node.js 的静态博客框架 + 免费托管的完美组合</em> </p>
+<hr>
+<h2 id="一、环境准备与工具安装"><a href="#一、环境准备与工具安装" class="headerlink" title="一、环境准备与工具安装"></a>一、环境准备与工具安装</h2><h3 id="1-1-安装-Homebrew（推荐国内镜像源）"><a href="#1-1-安装-Homebrew（推荐国内镜像源）" class="headerlink" title="1.1 安装 Homebrew（推荐国内镜像源）"></a>1.1 安装 Homebrew（推荐国内镜像源）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用中科大镜像加速安装（适合中国大陆用户）</span></span><br><span class="line"><span class="built_in">export</span> HOMEBREW_BREW_GIT_REMOTE=<span class="string">&quot;https://mirrors.ustc.edu.cn/brew.git&quot;</span></span><br><span class="line">/bin/bash -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+<p><em>国际用户可直接使用官方脚本</em> </p>
+<h3 id="1-2-安装核心组件"><a href="#1-2-安装核心组件" class="headerlink" title="1.2 安装核心组件"></a>1.2 安装核心组件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install git          <span class="comment"># macOS 虽自带 Git，建议更新版本</span></span><br><span class="line">brew install node        <span class="comment"># 包含 npm 包管理器</span></span><br><span class="line">node -v &amp;&amp; npm -v        <span class="comment"># 验证安装（推荐 Node.js ≥v18）</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="二、Hexo-博客系统搭建"><a href="#二、Hexo-博客系统搭建" class="headerlink" title="二、Hexo 博客系统搭建"></a>二、Hexo 博客系统搭建</h2><h3 id="2-1-初始化项目"><a href="#2-1-初始化项目" class="headerlink" title="2.1 初始化项目"></a>2.1 初始化项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli  <span class="comment"># 全局安装脚手架</span></span><br><span class="line">hexo init myblog         <span class="comment"># 创建博客目录</span></span><br><span class="line"><span class="built_in">cd</span> myblog &amp;&amp; npm install <span class="comment"># 安装依赖包</span></span><br></pre></td></tr></table></figure>
+<p><em>目录结构说明</em>：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">myblog</span><br><span class="line">├── _config.yml     # 全局配置文件</span><br><span class="line">├── source          # 文章与资源存放处</span><br><span class="line">├── themes          # 主题存放目录</span><br><span class="line">└── package.json    # 依赖管理文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-本地预览"><a href="#2-2-本地预览" class="headerlink" title="2.2 本地预览"></a>2.2 本地预览</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g   <span class="comment"># 生成静态文件</span></span><br><span class="line">hexo server            <span class="comment"># 启动本地服务</span></span><br></pre></td></tr></table></figure>
+<p><em>访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 查看初始页面</em> </p>
+<hr>
+<h2 id="三、部署到-GitHub-Pages"><a href="#三、部署到-GitHub-Pages" class="headerlink" title="三、部署到 GitHub Pages"></a>三、部署到 GitHub Pages</h2><h3 id="3-1-配置-SSH-密钥"><a href="#3-1-配置-SSH-密钥" class="headerlink" title="3.1 配置 SSH 密钥"></a>3.1 配置 SSH 密钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;your@email.com&quot;</span>  <span class="comment"># 三次回车生成密钥</span></span><br><span class="line">pbcopy &lt; ~/.ssh/id_rsa.pub            <span class="comment"># 复制公钥到剪贴板</span></span><br></pre></td></tr></table></figure>
+<p><em>登录 GitHub → Settings → SSH Keys 添加新密钥</em> </p>
+<h3 id="3-2-创建代码仓库"><a href="#3-2-创建代码仓库" class="headerlink" title="3.2 创建代码仓库"></a>3.2 创建代码仓库</h3><ol>
+<li>新建名为 <code>&lt;username&gt;.github.io</code> 的公开仓库  </li>
+<li>修改 <code>_config.yml</code> 部署配置：</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-部署到云端"><a href="#3-3-部署到云端" class="headerlink" title="3.3 部署到云端"></a>3.3 部署到云端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save  <span class="comment"># 安装部署插件</span></span><br><span class="line">hexo clean &amp;&amp; hexo g -d               <span class="comment"># 生成并部署</span></span><br></pre></td></tr></table></figure>
+<p><em>首次部署需创建 Personal Access Token 替代密码</em> </p>
+<hr>
+<h2 id="四、主题定制与优化"><a href="#四、主题定制与优化" class="headerlink" title="四、主题定制与优化"></a>四、主题定制与优化</h2><h3 id="4-1-安装热门主题（以-Fluid-为例）"><a href="#4-1-安装热门主题（以-Fluid-为例）" class="headerlink" title="4.1 安装热门主题（以 Fluid 为例）"></a>4.1 安装热门主题（以 Fluid 为例）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/fluid-dev/hexo-theme-fluid themes/fluid</span><br></pre></td></tr></table></figure>
+<p>修改全局配置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">fluid</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-推荐配置项"><a href="#4-2-推荐配置项" class="headerlink" title="4.2 推荐配置项"></a>4.2 推荐配置项</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 主题配置文件 _config.fluid.yml</span></span><br><span class="line"><span class="attr">navbar:</span></span><br><span class="line">  <span class="attr">menu:</span></span><br><span class="line">    <span class="bullet">-</span> &#123; <span class="attr">key:</span> <span class="string">&#x27;home&#x27;</span>, <span class="attr">link:</span> <span class="string">&#x27;/&#x27;</span>, <span class="attr">icon:</span> <span class="string">&#x27;iconfont icon-home&#x27;</span> &#125;</span><br><span class="line">    <span class="bullet">-</span> &#123; <span class="attr">key:</span> <span class="string">&#x27;archives&#x27;</span>, <span class="attr">link:</span> <span class="string">&#x27;/archives/&#x27;</span>, <span class="attr">icon:</span> <span class="string">&#x27;iconfont icon-archive&#x27;</span> &#125;</span><br><span class="line"><span class="attr">lazyload:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>         <span class="comment"># 启用图片懒加载</span></span><br><span class="line">  <span class="attr">loading_img:</span> <span class="string">/img/loading.gif</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="五、写作与发布流程"><a href="#五、写作与发布流程" class="headerlink" title="五、写作与发布流程"></a>五、写作与发布流程</h2><h3 id="5-1-创建新文章"><a href="#5-1-创建新文章" class="headerlink" title="5.1 创建新文章"></a>5.1 创建新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;我的第一篇博客&quot;</span>  <span class="comment"># 生成 /source/_posts/我的第一篇博客.md</span></span><br></pre></td></tr></table></figure>
+<p><em>Markdown 文件需包含 Front Matter</em>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 我的第一篇博客</span><br><span class="line">date: 2023-08-20</span><br><span class="line">tags: </span><br><span class="line"><span class="bullet">  -</span> 技术分享</span><br><span class="line"><span class="section">  - Hexo</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-插入本地图片"><a href="#5-2-插入本地图片" class="headerlink" title="5.2 插入本地图片"></a>5.2 插入本地图片</h3><ol>
+<li>在 <code>/source/images</code> 创建图片目录  </li>
+<li>使用相对路径引用：</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片描述</span>](<span class="link">/images/sample.jpg</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="六、高级技巧与问题排查"><a href="#六、高级技巧与问题排查" class="headerlink" title="六、高级技巧与问题排查"></a>六、高级技巧与问题排查</h2><h3 id="6-1-国内优化方案"><a href="#6-1-国内优化方案" class="headerlink" title="6.1 国内优化方案"></a>6.1 国内优化方案</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置淘宝镜像源</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-常见问题处理"><a href="#6-2-常见问题处理" class="headerlink" title="6.2 常见问题处理"></a>6.2 常见问题处理</h3><table>
+<thead>
+<tr>
+<th>问题现象</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SSH 连接失败</td>
+<td>执行 <code>ssh -T git@github.com</code> 测试</td>
+</tr>
+<tr>
+<td>部署后页面无更新</td>
+<td>清除浏览器缓存或等待 CDN 刷新</td>
+</tr>
+<tr>
+<td>图片加载异常</td>
+<td>检查路径大小写是否正确</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>扩展阅读</strong>：  </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo 官方文档</a>   </li>
+<li><a target="_blank" rel="noopener" href="https://fluid-dev.github.io/hexo-fluid-docs/guide/">Fluid 主题深度配置指南</a><br>如需更详细的教程，请参阅<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102592286">https://zhuanlan.zhihu.com/p/102592286</a></li>
+</ul>
 
       
     </div>
@@ -1158,19 +1158,19 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>AI 聊天助手 - 普通模式</title>
+  <title>AI 聊天助手 - 已切换至 chatanywhere.tech</title>
 
   <!-- 引入 marked.js -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
   <!-- 引入 highlight.js（代码高亮） -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/github.min.css"> 
-  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/github.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
 
   <!-- 引入 KaTeX（数学公式渲染） -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"> 
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script> 
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"  onload="renderMath()"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" onload="renderMath()"></script>
 
   <style>
     body {
@@ -1465,17 +1465,26 @@ async function sendMessage() {
   saveHistoryToLocalStorage();
 
   try {
-    const response = await fetch('https://free.v36.cm/v2',  {
+    // ✅ 使用 chatanywhere.tech 国内优选地址
+    const response = await fetch('https://api.chatanywhere.tech/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer sk-Lb975ni0OqDsiOMX10BaE1194bC34e01A0B39dB92cE3E190'
+        'Authorization': 'Bearer sk-aKzUjdcfzEPY4Lg3iQYuQDuwK28HNzL1PDhNpGWaIpJfXc5S'
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
         messages: chatHistory
       })
     });
+
+    // 检查响应类型
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      const text = await response.text();
+      console.error("收到非 JSON 响应:", text);
+      throw new Error("API 返回了 HTML 页面，可能是服务异常或需登录");
+    }
 
     const data = await response.json();
     const reply = data.choices?.[0]?.message?.content || '出错了';
@@ -1492,7 +1501,7 @@ async function sendMessage() {
 
     const errorDiv = document.createElement('div');
     errorDiv.className = 'message bot';
-    errorDiv.innerHTML = marked.parse('请求失败: ' + e.message);
+    errorDiv.innerHTML = marked.parse(`请求失败: ${e.message}`);
     document.getElementById("chatbot-messages").appendChild(errorDiv);
     autoScrollToBottom();
 
@@ -1514,7 +1523,6 @@ function addMessage(text, role) {
   div.innerHTML = marked.parse(text);
   div.setAttribute('contenteditable', role === 'user' ? 'true' : 'false');
 
-  // 创建按钮容器
   const buttonsDiv = document.createElement('div');
   buttonsDiv.className = 'message-buttons';
 
@@ -1563,7 +1571,6 @@ function updateMessage(element, newContent) {
     saveHistoryToLocalStorage();
   }
 
-  // 重新插入编辑按钮
   const oldButtons = element.querySelector('.message-buttons');
   if (oldButtons) oldButtons.remove();
 
@@ -1605,7 +1612,7 @@ async function fetchAIReply(userMessage, index) {
   messagesContainer.appendChild(typingDiv);
 
   try {
-    const response = await fetch('https://api.chatanywhere.tech/v1/chat/completions',  {
+    const response = await fetch('https://api.chatanywhere.tech/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -1616,6 +1623,13 @@ async function fetchAIReply(userMessage, index) {
         messages: [{ role: "user", content: userMessage }]
       })
     });
+
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      const text = await response.text();
+      console.error("重新生成时收到非 JSON 响应:", text);
+      throw new Error("上游服务异常");
+    }
 
     const data = await response.json();
     const reply = data.choices?.[0]?.message?.content || '出错了';
